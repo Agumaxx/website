@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Claudio Cansino - Diputado Nacional | diputadoclaudiocansino.com.ar</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <style>
+        :root {
+            --violeta-principal: #6a1b9a;
+            --violeta-oscuro: #4a148c;
+            --amarillo-libertad: #ffeb3b;
+            --negro-fondo: #121212;
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Montserrat', sans-serif; background-color: white; color: #333; line-height: 1.6; }
+
+        /* Navegación */
+        nav {
+            background: var(--negro-fondo);
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 3px solid var(--violeta-principal);
+        }
+        nav .logo { font-weight: 900; color: white; font-size: 1.3rem; }
+        nav .logo span { color: var(--violeta-principal); }
+        nav ul { display: flex; list-style: none; align-items: center; }
+        nav ul li { margin-left: 20px; }
+        nav ul li a { text-decoration: none; color: white; font-weight: 700; font-size: 0.8rem; text-transform: uppercase; }
+        
+        .nav-social a { color: var(--amarillo-libertad); font-size: 1.1rem; margin-left: 15px; transition: 0.3s; }
+        .nav-social a:hover { color: white; }
+
+        /* Hero Section - AQUÍ SE CAMBIA LA FOTO */
+        .hero {
+            height: 85vh;
+            background: linear-gradient(135deg, rgba(74, 20, 140, 0.7), rgba(0, 0, 0, 0.8)), 
+                        url('foto-diputado.jpg'); /* NOMBRE DE TU ARCHIVO DE IMAGEN */
+            background-size: cover;
+            background-position: center top;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+            padding: 0 20px;
+        }
+        .hero h1 { font-size: 3.5rem; font-weight: 900; text-transform: uppercase; margin-bottom: 10px; text-shadow: 2px 2px 10px rgba(0,0,0,0.5); }
+        .hero p { font-size: 1.2rem; margin-bottom: 25px; letter-spacing: 1px; font-weight: 700; }
+        
+        .btn-libertad {
+            background: var(--violeta-principal);
+            color: white;
+            padding: 15px 35px;
+            text-decoration: none;
+            font-weight: 900;
+            border: 2px solid var(--amarillo-libertad);
+            text-transform: uppercase;
+            transition: 0.3s;
+        }
+        .btn-libertad:hover { background: var(--amarillo-libertad); color: black; transform: scale(1.05); }
+
+        /* Estilos generales */
+        .frase { background: var(--negro-fondo); color: white; padding: 40px 10%; text-align: center; font-style: italic; border-bottom: 5px solid var(--violeta-principal); }
+        .seccion { padding: 80px 10%; }
+        .titulo-seccion { font-size: 2.2rem; text-align: center; margin-bottom: 40px; font-weight: 900; color: var(--violeta-oscuro); text-transform: uppercase; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+        .tarjeta { background: white; padding: 30px; border-left: 8px solid var(--violeta-principal); box-shadow: 10px 10px 0px rgba(106, 27, 154, 0.1); }
+        .galeria-item img { width: 100%; height: 250px; object-fit: cover; border-radius: 5px; border: 2px solid var(--violeta-principal); }
+        .video-item { position: relative; padding-bottom: 56.25%; height: 0; border: 3px solid var(--violeta-principal); }
+        .video-item iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+        .contacto { background: #f4f4f4; }
+        .form-container { max-width: 600px; margin: 0 auto; background: white; padding: 30px; border-radius: 10px; }
+        input, textarea { width: 100%; padding: 12px; margin-bottom: 15px; border: 1px solid #ccc; font-family: inherit; }
+        .btn-enviar { width: 100%; background: var(--negro-fondo); color: white; border: none; padding: 15px; font-weight: 900; cursor: pointer; text-transform: uppercase; }
+        
+        footer { background: var(--negro-fondo); color: white; padding: 40px; text-align: center; border-top: 4px solid var(--amarillo-libertad); }
+        .social-footer { margin-top: 20px; font-size: 1.8rem; }
+        .social-footer a { color: white; margin: 0 15px; transition: 0.3s; }
+        .social-footer a:hover { color: var(--amarillo-libertad); }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.2rem; }
+            nav { flex-direction: column; gap: 10px; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">Claudio Jose <span> Cansino</span></div>
+        <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#proyectos">Proyectos</a></li>
+            <li><a href="#galeria">Actividad</a></li>
+            <div class="nav-social">
+                <a href="https://www.facebook.com/claudiomaxx/"><i class="fab fa-facebook"></i></a>
+                <a href="https://x.com/ClaudioCansino"><i class="fab fa-x-twitter"></i></a>
+                <a href="https://www.instagram.com/claudiocansino/?hl=es"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.tiktok.com/@claudio_cansino"><i class="fab fa-tiktok"></i></a>
+                <a href="https://www.linkedin.com/in/claudio-cansino/"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </ul>
+    </nav>
+
+    <section id="inicio" class="hero">
+        <h1>VIVA LA LIBERTAD</h1>
+        <p>DIPUTADO NACIONAL | LA LIBERTAD AVANZA</p>
+        <a href="#contacto" class="btn-libertad">Sumate a las Fuerzas</a>
+    </section>
+
+    <div class="frase">
+        <h2>"No vine a guiar corderos, vine a despertar leones."</h2>
+    </div>
+
+    <section id="proyectos" class="seccion">
+        <h2 class="titulo-seccion">Propuestas Legislativas</h2>
+        <div class="grid">
+            <div class="tarjeta">
+                <h3>Déficit Cero</h3>
+                <p>Equilibrar las cuentas para terminar con la inflación.</p>
+            </div>
+            <div class="tarjeta">
+                <h3>Menos Impuestos</h3>
+                <p>Bajar la carga tributaria a los que producen.</p>
+            </div>
+            <div class="tarjeta">
+                <h3>Seguridad</h3>
+                <p>El que las hace, las paga. Respaldo a las fuerzas de seguridad.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contacto">
+        <p>DIPUTADO NACIONAL | LA LIBERTAD AVANZA</p>
+        <div class="social-footer">
+            <a href="https://www.facebook.com/claudiomaxx/"><i class="fab fa-facebook"></i></a>
+            <a href="https://x.com/ClaudioCansino"><i class="fab fa-x-twitter"></i></a>
+            <a href="https://www.instagram.com/claudiocansino/?hl=es"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.tiktok.com/@claudio_cansino"><i class="fab fa-tiktok"></i></a>
+            <a href="https://www.linkedin.com/in/claudio-cansino/"><i class="fab fa-linkedin"></i></a>
+        </div>
+        <p style="font-size: 0.8rem; margin-top: 25px; color: var(--amarillo-libertad);">VIVA LA LIBERTAD CARAJO</p>
+    </footer>
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+    </script>
+</body>
+</html>
